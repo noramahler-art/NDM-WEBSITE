@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nora Dudley Mahler Photography</title>
+  <!-- Canonical and social meta for deployed site -->
+  <link rel="canonical" href="https://noradmahlerphoto.com/">
+  <meta property="og:site_name" content="Nora Dudley Mahler Photography">
+  <meta property="og:title" content="Nora Dudley Mahler Photography">
+  <meta property="og:description" content="Photography portfolio by Nora Dudley Mahler.">
+  <meta property="og:url" content="https://noradmahlerphoto.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://noradmahlerphoto.com/Images/home/featured.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nora Dudley Mahler Photography">
+  <meta name="twitter:description" content="Photography portfolio by Nora Dudley Mahler.">
+  <meta name="twitter:image" content="https://noradmahlerphoto.com/Images/home/featured.jpg">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #ffffff;
+      padding: 1.5rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+
+    nav a {
+      color: #2c2c2c;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+      font-weight: 900;
+      text-transform: uppercase;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #666;
+      transform: scale(1.1);
+    }
+
+    /* Home Page */
+    .home-container {
+      min-height: calc(100vh - 60px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      padding: 3rem 2rem;
+    }
+
+    .home-title {
+      text-align: center;
+      color: #2c2c2c;
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .home-title h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 3px;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    /* Gallery Pages */
+    .page {
+      display: none;
+      padding: 3rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .page-header h2 {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #2c2c2c;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .page-header p {
+      font-size: 1.4rem;
+      color: #666;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      /* two items per row */
+      grid-template-columns: repeat(2, 1fr);
+      /* small gap to separate images subtly */
+      gap: 12px;
+      margin-top: 2rem;
+      align-items: stretch;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      /* no visible borders or shadows */
+      border-radius: 0;
+      box-shadow: none;
+      transition: transform 0.12s ease;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* let items size consistently while keeping images contained */
+      min-height: 520px;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .gallery-item img {
+      /* show the full image without cropping */
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .home-title h1 {
+        font-size: 2.5rem;
+      }
+
+      nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+
+      .page-header h2 {
+        font-size: 2rem;
+      }
+
+      .gallery {
+        /* single column on small screens */
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .gallery-item {
+        min-height: 360px;
+      }
+
+      .gallery-item img {
+        /* contained and constrained by the smaller row height */
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home" onclick="showPage('home')">Home</a></li>
+      <li><a href="#experimental" onclick="showPage('experimental')">Experimental Processes</a></li>
+      <li><a href="#traditional" onclick="showPage('traditional')">Traditional B&W Photography</a></li>
+      <li><a href="#darkroom" onclick="showPage('darkroom')">Darkroom Techniques & Double Exposure</a></li>
+      <li><a href="#color" onclick="showPage('color')">Color Photography</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Page -->
+  <div id="home" class="page active">
+    <div class="home-container">
+      <div class="home-title">
+        <h1>Nora Dudley Mahler</h1>
+        <h1>Photography</h1>
+      </div>
+      <!-- Featured image on Home: place a file at Images/home/featured.jpg to show here -->
+      <div id="featured" style="width:100%;max-width:1100px;margin:1.5rem auto 0;">
+        <img id="featured-img" src="Images/home/featured.jpg" alt="Featured"
+          style="width:100%;height:auto;display:block;object-fit:cover;">
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+  <!-- Experimental Processes Page -->
+  <div id="experimental" class="page">
+    <div class="page-header">
+      <h2>Experimental Processes</h2>
+      <p>Van Dyke Brown, Cyanotype, and Pinhole Cameras</p>
+    </div>
+    <div class="gallery">
+      <!-- GALLERY:experimental START -->
+      <div class="gallery-item">
+        <img src="Images/experimental/1.jpg" alt="experimental - 1.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/experimental/2.jpg" alt="experimental - 2.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/experimental/3.jpg" alt="experimental - 3.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/experimental/4.jpg" alt="experimental - 4.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/experimental/5.jpg" alt="experimental - 5.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/experimental/6.jpg" alt="experimental - 6.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/experimental/7.jpg" alt="experimental - 7.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/experimental/8.jpg" alt="experimental - 8.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/experimental/9.jpg" alt="experimental - 9.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/experimental/10.jpg" alt="experimental - 10.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/experimental/11.jpg" alt="experimental - 11.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/experimental/12.jpg" alt="experimental - 12.jpg">
+      </div>
+      <!-- GALLERY:experimental END -->
+    </div>
+  </div>
+
+  <!-- Traditional B&W Photography Page -->
+  <div id="traditional" class="page">
+    <div class="page-header">
+      <h2>Traditional B&W Photography</h2>
+      <p>35mm</p>
+    </div>
+    <div class="gallery">
+      <!-- GALLERY:traditional START -->
+      <div class="gallery-item">
+        <img src="Images/traditional/1.jpg" alt="traditional - 1.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/2.jpg" alt="traditional - 2.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/3.jpg" alt="traditional - 3.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/4.jpg" alt="traditional - 4.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/5.jpg" alt="traditional - 5.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/6.jpg" alt="traditional - 6.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/7.jpg" alt="traditional - 7.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/8.jpg" alt="traditional - 8.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/9.jpg" alt="traditional - 9.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/10.jpg" alt="traditional - 10.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/11.jpg" alt="traditional - 11.jpg">
+      </div>
+      <!-- GALLERY:traditional END -->
+    </div>
+  </div>
+
+  <!-- Darkroom Techniques Page -->
+  <div id="darkroom" class="page">
+    <div class="page-header">
+      <h2>Darkroom Techniques & Double Exposure</h2>
+      <p>Superimposing, layering, multiple exposures, and use of digital negatives</p>
+    </div>
+    <div class="gallery">
+      <!-- GALLERY:darkroom START -->
+      <div class="gallery-item">
+        <img src="Images/darkroom/1.jpg" alt="darkroom - 1.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/2.jpg" alt="darkroom - 2.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/3.jpg" alt="darkroom - 3.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/4.jpg" alt="darkroom - 4.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/5.jpg" alt="darkroom - 5.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/6.jpg" alt="darkroom - 6.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/7.jpg" alt="darkroom - 7.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/8.jpg" alt="darkroom - 8.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/9.jpg" alt="darkroom - 9.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/10.jpg" alt="darkroom - 10.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/11.jpg" alt="darkroom - 11.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/12.jpg" alt="darkroom - 12.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/14.jpg" alt="darkroom - 14.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/15.jpg" alt="darkroom - 15.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/16.jpg" alt="darkroom - 16.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/17.jpg" alt="darkroom - 17.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/18.jpg" alt="darkroom - 18.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/19.jpg" alt="darkroom - 19.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/20.jpg" alt="darkroom - 20.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/21.jpg" alt="darkroom - 21.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/22.jpg" alt="darkroom - 22.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/23.jpg" alt="darkroom - 23.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/24.jpg" alt="darkroom - 24.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/25.jpg" alt="darkroom - 25.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/26.jpg" alt="darkroom - 26.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/27.jpg" alt="darkroom - 27.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/darkroom/28.jpg" alt="darkroom - 28.jpg">
+      </div>
+      <!-- GALLERY:darkroom END -->
+    </div>
+  </div>
+
+  <!-- Color Photography Page -->
+  <div id="color" class="page">
+    <div class="page-header">
+      <h2>Color Photography</h2>
+      <p>Using a 35mm camera</p>
+    </div>
+    <div class="gallery">
+      <!-- GALLERY:color START -->
+      <div class="gallery-item">
+        <img src="Images/color/1.jpg" alt="color - 1.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/2.jpg" alt="color - 2.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/3.jpg" alt="color - 3.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/4.jpg" alt="color - 4.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/5.jpg" alt="color - 5.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/6.jpg" alt="color - 6.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/7.jpg" alt="color - 7.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/8.jpg" alt="color - 8.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/9.jpg" alt="color - 9.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/10.jpg" alt="color - 10.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/11.jpg" alt="color - 11.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/12.jpg" alt="color - 12.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/13.jpg" alt="color - 13.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/14.jpg" alt="color - 14.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/15.jpg" alt="color - 15.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/16.jpg" alt="color - 16.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/17.jpg" alt="color - 17.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/18.jpg" alt="color - 18.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/color/19.jpg" alt="color - 19.jpg">
+      </div>
+      <!-- GALLERY:color END -->
+    </div>
+  </div>
+
+  <script>
+    function showPage(pageId) {
+      // Hide all pages
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+
+      // Show selected page
+      document.getElementById(pageId).classList.add('active');
+
+      // Scroll to top
+      window.scrollTo(0, 0);
+    }
+
+    // Preview functionality removed — add images permanently to the Images/ folders on disk.
+  </script>
+</body>
+
+</html>
