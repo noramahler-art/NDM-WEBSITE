@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <!-- Version: 2026-05-07-v6 (SVG cursor icon, clickable galleries) -->
+  <!-- Version: 2026-09-04-v7 (Updated home, About page link, simplified galleries) -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -20,11 +20,11 @@
   <meta name="twitter:title" content="Nora Mahler Photography">
   <meta name="twitter:description" content="Photography portfolio by Nora Mahler.">
   <meta name="twitter:image" content="https://noramahlerphotography.com/Images/home/featured.jpg">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=7">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=7">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png?v=7">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png?v=7">
+  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png?v=7">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
@@ -730,43 +730,6 @@
       background: #2a2a2a;
     }
 
-    /* SEARCH BAR */
-    .search-container {
-      display: flex;
-      justify-content: center;
-      padding: 2rem 96px 1rem;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .search-input {
-      padding: 0.75rem 1rem;
-      font-size: 0.95rem;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-      border: 1.5px solid #ddd;
-      border-radius: 3px;
-      width: 300px;
-      max-width: 100%;
-      background: #fff;
-      color: #333;
-      transition: border-color 0.2s ease;
-    }
-
-    .search-input:focus {
-      outline: none;
-      border-color: #2c2c2c;
-    }
-
-    body.dark-mode .search-input {
-      background: #2a2a2a;
-      color: #e0e0e0;
-      border-color: #e0e0e0;
-    }
-
-    .search-input::placeholder {
-      color: #999;
-    }
-
     .dark-mode-toggle {
       background: none;
       border: 1.5px solid #2c2c2c;
@@ -791,53 +754,6 @@
     }
 
     body.dark-mode .dark-mode-toggle:hover {
-      background: #e0e0e0;
-      color: #1a1a1a;
-    }
-
-    /* FILTER BUTTONS */
-    .filter-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      padding: 0 96px 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .filter-btn {
-      background: #f8f8f8;
-      border: 1.5px solid #ddd;
-      color: #2c2c2c;
-      padding: 0.6rem 1.2rem;
-      cursor: pointer;
-      border-radius: 3px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-      font-weight: 500;
-      font-size: 0.9rem;
-      transition: all 0.2s ease;
-    }
-
-    .filter-btn:hover {
-      background: #2c2c2c;
-      color: #fff;
-      border-color: #2c2c2c;
-    }
-
-    .filter-btn.active {
-      background: #2c2c2c;
-      color: #fff;
-      border-color: #2c2c2c;
-    }
-
-    body.dark-mode .filter-btn {
-      background: #2a2a2a;
-      border-color: #e0e0e0;
-      color: #e0e0e0;
-    }
-
-    body.dark-mode .filter-btn:hover,
-    body.dark-mode .filter-btn.active {
       background: #e0e0e0;
       color: #1a1a1a;
     }
@@ -875,7 +791,6 @@
       color: #1a1a1a;
     }
 
-    /* LOADING ANIMATION */
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -892,63 +807,19 @@
       animation: fadeInUp 0.6s ease forwards;
     }
 
-    .gallery-item:nth-child(1) {
-      animation-delay: 0.05s;
-    }
-
-    .gallery-item:nth-child(2) {
-      animation-delay: 0.1s;
-    }
-
-    .gallery-item:nth-child(3) {
-      animation-delay: 0.15s;
-    }
-
-    .gallery-item:nth-child(4) {
-      animation-delay: 0.2s;
-    }
-
-    .gallery-item:nth-child(5) {
-      animation-delay: 0.25s;
-    }
-
-    .gallery-item:nth-child(6) {
-      animation-delay: 0.3s;
-    }
-
-    .gallery-item:nth-child(7) {
-      animation-delay: 0.35s;
-    }
-
-    .gallery-item:nth-child(8) {
-      animation-delay: 0.4s;
-    }
-
-    .gallery-item:nth-child(9) {
-      animation-delay: 0.45s;
-    }
-
-    .gallery-item:nth-child(10) {
-      animation-delay: 0.5s;
-    }
+    .gallery-item:nth-child(1) { animation-delay: 0.05s; }
+    .gallery-item:nth-child(2) { animation-delay: 0.1s; }
+    .gallery-item:nth-child(3) { animation-delay: 0.15s; }
+    .gallery-item:nth-child(4) { animation-delay: 0.2s; }
+    .gallery-item:nth-child(5) { animation-delay: 0.25s; }
+    .gallery-item:nth-child(6) { animation-delay: 0.3s; }
+    .gallery-item:nth-child(7) { animation-delay: 0.35s; }
+    .gallery-item:nth-child(8) { animation-delay: 0.4s; }
+    .gallery-item:nth-child(9) { animation-delay: 0.45s; }
+    .gallery-item:nth-child(10) { animation-delay: 0.5s; }
 
     img.loaded {
       opacity: 1 !important;
-    }
-
-    @media (max-width: 768px) {
-      .search-container {
-        flex-direction: column;
-        padding: 1.5rem 24px 1rem;
-      }
-
-      .search-input {
-        width: 100%;
-      }
-
-      .filter-buttons {
-        padding: 0 24px 1.5rem;
-      }
     }
   </style>
 </head>
@@ -1018,8 +889,7 @@
       <p>Van Dyke Brown, Cyanotype, and Pinhole Cameras</p>
     </div>
     <div class="page-content">
-      <div id="experimental-cards" class="folder-cards">
-      </div>
+      <div id="experimental-cards" class="folder-cards"></div>
     </div>
   </div>
 
@@ -1029,8 +899,7 @@
       <p>35mm</p>
     </div>
     <div class="page-content">
-      <div class="gallery" id="traditional-gallery">
-      </div>
+      <div class="gallery" id="traditional-gallery"></div>
     </div>
   </div>
 
@@ -1040,8 +909,7 @@
       <p>Film Photography</p>
     </div>
     <div class="page-content">
-      <div class="gallery" id="darkroom-gallery">
-      </div>
+      <div class="gallery" id="darkroom-gallery"></div>
     </div>
   </div>
 
@@ -1051,8 +919,7 @@
       <p>Film & Digital</p>
     </div>
     <div class="page-content">
-      <div class="gallery" id="color-gallery">
-      </div>
+      <div class="gallery" id="color-gallery"></div>
     </div>
   </div>
 
@@ -1062,22 +929,7 @@
       <p>Digital Creations</p>
     </div>
     <div class="page-content">
-      <div class="gallery" id="digitalart-gallery">
-      </div>
-    </div>
-  </div>
-
-  <div id="itsw" class="page">
-    <div class="page-header">
-      <h2>In The Same World</h2>
-      <p>A Photographic Project</p>
-    </div>
-    <div class="page-content">
-      <div id="itsw-gallery">
-      </div>
-      <div class="itsw-narrative">
-        <p>In The Same World is a long-term photographic project exploring themes of connection, memory, and shared human experience across different places and times.</p>
-      </div>
+      <div class="gallery" id="digitalart-gallery"></div>
     </div>
   </div>
 
@@ -1092,7 +944,6 @@
   </div>
 
   <script>
-    // Dark mode
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
       localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
@@ -1102,33 +953,29 @@
       document.body.classList.add('dark-mode');
     }
 
-    // Navigation
     function toggleMenu() {
       document.getElementById('nav-menu').classList.toggle('open');
     }
 
     function showPage(pageName) {
-      // Hide all pages
       const pages = document.querySelectorAll('.page');
       pages.forEach(page => page.classList.remove('active'));
 
-      // Show selected page
       const selectedPage = document.getElementById(pageName);
       if (selectedPage) {
         selectedPage.classList.add('active');
       }
 
-      // Close menu on mobile
       document.getElementById('nav-menu').classList.remove('open');
 
-      // Update active link
       document.querySelectorAll('nav a').forEach(link => {
         link.classList.remove('active-link');
       });
-      event.target.classList.add('active-link');
+      if (event && event.target) {
+        event.target.classList.add('active-link');
+      }
     }
 
-    // Back to top
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -1142,7 +989,6 @@
       }
     });
 
-    // Lightbox
     let currentImageIndex = 0;
     let currentImages = [];
 
@@ -1152,8 +998,7 @@
       lightboxImg.src = src;
       lightbox.classList.add('open');
 
-      // Find current image in the array
-      currentImages = Array.from(document.querySelectorAll('.gallery-item img, .itsw-item img, .folder-card img, .home-image-item img'))
+      currentImages = Array.from(document.querySelectorAll('.gallery-item img, .itsw-item img, .folder-card img'))
         .map(img => img.src);
       currentImageIndex = currentImages.indexOf(src);
       updateLightboxCounter();
@@ -1185,14 +1030,12 @@
       document.getElementById('total-images').textContent = currentImages.length;
     }
 
-    // Close lightbox on escape
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeLightbox();
       if (e.key === 'ArrowRight') nextLightbox();
       if (e.key === 'ArrowLeft') prevLightbox();
     });
 
-    // Image loading
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('img').forEach(img => {
         img.addEventListener('load', function() {
