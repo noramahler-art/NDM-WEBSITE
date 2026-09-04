@@ -17,11 +17,11 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About - Nora Mahler Photography">
   <meta name="twitter:description" content="About Nora Mahler and her photography philosophy.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=7">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=7">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png?v=7">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png?v=7">
+  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png?v=7">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
@@ -117,7 +117,7 @@
 
     .page-content {
       padding: 0 96px 3rem;
-      max-width: calc(100% - 192px);
+      max-width: 900px;
       margin: 0 auto;
     }
 
@@ -129,36 +129,15 @@
       color: #333;
       text-align: left;
       letter-spacing: 0.3px;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     .about-text-block p {
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.5rem;
     }
 
     .about-text-block p:last-child {
       margin-bottom: 0;
-    }
-
-    .about-image-item {
-      width: 100%;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      margin: 3rem 0;
-    }
-
-    .about-image-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-
-    .about-image-item img.loaded {
-      opacity: 1;
     }
 
     .hamburger {
@@ -321,11 +300,11 @@
     <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     <ul id="nav-menu">
       <li><a href="about.html" class="active-link">About</a></li>
-      <li><a href="index.html#experimental" onclick="goToGallery('experimental')">Experimental</a></li>
-      <li><a href="index.html#traditional" onclick="goToGallery('traditional')">Traditional B&W</a></li>
-      <li><a href="index.html#darkroom" onclick="goToGallery('darkroom')">Darkroom</a></li>
-      <li><a href="index.html#color" onclick="goToGallery('color')">Color</a></li>
-      <li><a href="index.html#digitalart" onclick="goToGallery('digitalart')">Digital Art</a></li>
+      <li><a href="index.html#experimental">Experimental</a></li>
+      <li><a href="index.html#traditional">Traditional B&W</a></li>
+      <li><a href="index.html#darkroom">Darkroom</a></li>
+      <li><a href="index.html#color">Color</a></li>
+      <li><a href="index.html#digitalart">Digital Art</a></li>
       <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button></li>
     </ul>
   </nav>
@@ -350,10 +329,6 @@
         limited.</p>
     </div>
 
-    <div class="about-image-item" onclick="openLightbox('Images/home/featured.jpg')">
-      <img class="loaded" src="Images/home/featured.jpg" alt="Featured">
-    </div>
-
     <div class="about-text-block">
       <p>In the digital age, the pressure to make our inner lives legible, to turn every thought into something to
         be consumed, viable for communication, or limpid language, feels even stronger. The moment our inner lives
@@ -370,20 +345,12 @@
       </p>
     </div>
 
-    <div class="about-image-item" onclick="openLightbox('Images/home/7Panorama Collage.jpg')">
-      <img class="loaded" src="Images/home/7Panorama Collage.jpg" alt="Panorama">
-    </div>
-
     <div class="about-text-block">
       <p>So is the key to a life of expression forming a path that aligns with how you think, or is it the ability
         to live contentedly and confidently in the significance of our imaginations without needing them to be
         consumable?</p>
       <p>I want any viewer of my work to be reminded that inner experience will always be richer, stranger, and more
         personal than anything to be consumed.</p>
-    </div>
-
-    <div class="about-image-item" onclick="openLightbox('Images/home/13.jpg')">
-      <img class="loaded" src="Images/home/13.jpg" alt="13">
     </div>
 
     <p style="text-align:center;margin-top:3rem;font-size:0.95rem;color:#666;letter-spacing:0.2px;">
@@ -405,18 +372,8 @@
       document.getElementById('nav-menu').classList.toggle('open');
     }
 
-    function goToGallery(gallery) {
-      // Navigate to index.html and pass gallery parameter
-      window.location.href = 'index.html#' + gallery;
-    }
-
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function openLightbox(src) {
-      // Simple lightbox functionality can be added here
-      window.open(src);
     }
 
     // Load dark mode preference
