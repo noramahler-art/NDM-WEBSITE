@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>About - Nora Mahler Photography</title>
+  <link rel="canonical" href="https://noramahlerphotography.com/about">
+  <meta property="og:site_name" content="Nora Mahler Photography">
+  <meta property="og:title" content="About - Nora Mahler Photography">
+  <meta property="og:description" content="About Nora Mahler and her photography philosophy.">
+  <meta property="og:url" content="https://noramahlerphotography.com/about">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About - Nora Mahler Photography">
+  <meta name="twitter:description" content="About Nora Mahler and her photography philosophy.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=7">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=7">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png?v=7">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png?v=7">
+  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png?v=7">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    nav {
+      background-color: #ffffff;
+      padding: 1rem 2.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+
+    .nav-brand:hover {
+      color: #666;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: clamp(1rem, 2vw, 2.5rem);
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: #2c2c2c;
+      text-decoration: none;
+      font-family: Georgia, serif;
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      font-weight: bold;
+      white-space: nowrap;
+      padding: 0.2rem 0;
+      transition: color 0.18s ease;
+    }
+
+    nav a:hover {
+      color: #000;
+      border-bottom: 1px solid #2c2c2c;
+    }
+
+    nav a.active-link {
+      color: #000;
+      border-bottom: 1px solid #2c2c2c;
+    }
+
+    .page-header {
+      text-align: center;
+      padding: 3rem 96px 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .page-header h1 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-content {
+      padding: 0 96px 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .about-text-block {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      line-height: 1.75;
+      color: #333;
+      text-align: left;
+      letter-spacing: 0.3px;
+      margin-bottom: 2rem;
+    }
+
+    .about-text-block p {
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.4rem;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #2c2c2c;
+      border-radius: 2px;
+    }
+
+    #back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 1.5rem;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      border-radius: 50%;
+      background: #2c2c2c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 500;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    #back-to-top:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .dark-mode-toggle {
+      background: none;
+      border: 1.5px solid #2c2c2c;
+      color: #2c2c2c;
+      cursor: pointer;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+      border-radius: 3px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .dark-mode-toggle:hover {
+      background: #2c2c2c;
+      color: #fff;
+    }
+
+    /* DARK MODE */
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+    }
+
+    body.dark-mode nav {
+      background-color: #0d0d0d;
+      border-bottom-color: #333;
+    }
+
+    body.dark-mode nav a,
+    body.dark-mode .nav-brand {
+      color: #e0e0e0;
+    }
+
+    body.dark-mode nav a:hover,
+    body.dark-mode nav a.active-link {
+      border-bottom-color: #e0e0e0;
+    }
+
+    body.dark-mode .page-header h1 {
+      color: #e0e0e0;
+    }
+
+    body.dark-mode .about-text-block {
+      color: #e0e0e0;
+    }
+
+    body.dark-mode #back-to-top {
+      background: #e0e0e0;
+      color: #1a1a1a;
+    }
+
+    body.dark-mode .dark-mode-toggle {
+      border-color: #e0e0e0;
+      color: #e0e0e0;
+    }
+
+    body.dark-mode .dark-mode-toggle:hover {
+      background: #e0e0e0;
+      color: #1a1a1a;
+    }
+
+    @media (max-width: 768px) {
+      .page-header {
+        padding: 2rem 24px 1.5rem;
+      }
+
+      .page-content {
+        padding: 0 24px 2rem;
+        max-width: 100%;
+      }
+
+      .about-text-block {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hamburger {
+        display: flex;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      nav ul.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        gap: 1rem;
+        padding: 1rem 0;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 99;
+        align-items: center;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a class="nav-brand" href="index.html">Nora Mahler</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    <ul id="nav-menu">
+      <li><a href="about.html" class="active-link">About</a></li>
+      <li><a href="index.html#experimental">Experimental</a></li>
+      <li><a href="index.html#traditional">Traditional B&W</a></li>
+      <li><a href="index.html#darkroom">Darkroom</a></li>
+      <li><a href="index.html#color">Color</a></li>
+      <li><a href="index.html#digitalart">Digital Art</a></li>
+      <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>About</h1>
+  </div>
+
+  <div class="page-content">
+    <div class="about-text-block">
+      <p>"I can't put into words what I'm trying to say." Most of us have said this and felt the frustration of
+        struggling to put our thoughts into comprehensible words at least once in our lives. This phrase most
+        accurately captures the frustration of grappling with the gap between a clear thought existing in our minds
+        and the words we use.</p>
+      <p>Language is our primary tool for connecting our minds to the world, but it also limits the accuracy of what
+        we can express. Our brains, bodies, and perception are present long before words come into play; they shape
+        our experiences in ways that can't always be reproduced verbally. Language is all we have to mediate our
+        brains and the world around us; it's what we use to connect to reality, but it also limits our ability to be
+        accurately understood. Translating complex thoughts into words is akin to writing musical notes as a
+        paragraph in English; the tools capture different kinds of meaning. We value language for its ability to
+        transform personal experiences into universal ones, but in reality, its capacity to do so is severely
+        limited.</p>
+    </div>
+
+    <div class="about-text-block">
+      <p>In the digital age, the pressure to make our inner lives legible, to turn every thought into something to
+        be consumed, viable for communication, or limpid language, feels even stronger. The moment our inner lives
+        become shareable or consumable, they become vulnerable to others' opinions and subject to change based on
+        what viewers take from them.</p>
+      <p>It was when I first began experimental darkroom photography that I remember making my first print by
+        manipulating multiple negatives in the enlargers – the first time I had ever successfully translated an
+        image from my imagination into something tangible. There was a sense of relief, because what I had never
+        believed possible, bringing something from my imagination to life, suddenly became feasible. Before this
+        experience, I was content knowing that everything that goes on in my mind, images, thoughts, ideas,
+        opinions, did not need to be proved essential or interesting to anybody, mainly because it couldn't be.
+        However, once it became possible for me to translate at least some of what transpired in my brain, the
+        significance of my work, and coincidentally my imagination, was suddenly placed in the hands of the viewer.
+      </p>
+    </div>
+
+    <div class="about-text-block">
+      <p>So is the key to a life of expression forming a path that aligns with how you think, or is it the ability
+        to live contentedly and confidently in the significance of our imaginations without needing them to be
+        consumable?</p>
+      <p>I want any viewer of my work to be reminded that inner experience will always be richer, stranger, and more
+        personal than anything to be consumed.</p>
+    </div>
+
+    <p style="text-align:center;margin-top:3rem;font-size:0.95rem;color:#666;letter-spacing:0.2px;">
+      Contact: <a href="mailto:noradmahler@gmail.com"
+        style="color:#2c2c2c;text-decoration:none;font-weight:500;transition:opacity 0.2s ease;"
+        onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">noradmahler@gmail.com</a>
+    </p>
+  </div>
+
+  <button id="back-to-top" onclick="scrollToTop()">↑</button>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    }
+
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('open');
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Load dark mode preference
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+    }
+
+    // Show/hide back-to-top button
+    window.addEventListener('scroll', function() {
+      const btn = document.getElementById('back-to-top');
+      if (window.pageYOffset > 300) {
+        btn.style.display = 'flex';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('nav-menu').classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
